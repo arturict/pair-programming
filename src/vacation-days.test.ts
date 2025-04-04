@@ -24,9 +24,9 @@ describe("leap year", () => {
       startDate: new Date(Date.parse("2025-01-01 00:00:00+01:00")),
       untilDate: new Date(Date.parse("2025-12-31 23:59:59+01:00")),
       percentage: 70,
-      vacationDays: 17.5,
+      vacationDays: 30,
     };
-    const expected = 17.5 
+    const expected = 21
     // Act
     const actual = calculateProRataVacationDays(partTime);
   
