@@ -8,7 +8,7 @@ export type Employment = {
 export function calculateProRataVacationDays(employment: Employment): number {
   // TODO: calculate pro rata (consider workload and days worked)
   let vacationDays = 0;
-  vacationDays = employment.vacationDays * (calculateDaysBetweenTwoDates(employment.startDate, employment.untilDate))/365 * (employment.percentage /100)
+  vacationDays = employment.vacationDays * (calculateDaysBetweenTwoDates(employment.startDate, employment.untilDate)) / 365 * (employment.percentage / 100)
     return parseFloat(vacationDays.toFixed(2));
 }
 //source: https://stackoverflow.com/questions/43735678/typescript-get-difference-between-two-dates-in-days
