@@ -32,4 +32,5 @@ describe("leap year", () => {
   
     // Assert
     expect(actual).toBe(expected);
+  });
 });
