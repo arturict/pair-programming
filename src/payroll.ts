@@ -28,6 +28,9 @@ export function calculatePayslip(salary: Salary): Payslip {
   let age = ageMilliseconds / 1000 / 3600 / 365.25
   let yearSalary = salary.gross * 12;
   let netSalary = salary.gross;
+  if(currentdate.getFullYear() - salary.born.getFullYear() == 17){
+    netSalary -= (salary.gross/100) * (DEDUCTION_RATES["AHV"] + DEDUCTION_RATES["IV"] + DEDUCTION_RATES["EO"])
+  }
   if(yearSalary > 2500) {
     netSalary -= (salary.gross/100) * (DEDUCTION_RATES["ALV"] + DEDUCTION_RATES["NBU"])
   }
