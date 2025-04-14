@@ -12,7 +12,7 @@ describe("Lohnabrechnung", () => {
         const actual = calculatePayslip(minorSalary);
 
         //Assert
-        expect(actual).toBe(expected);
+        expect(actual.salary).toBe(expected);
     });
 
 }
