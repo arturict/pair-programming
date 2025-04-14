@@ -31,6 +31,9 @@ export function calculatePayslip(salary: Salary): Payslip {
   if(yearSalary > 2500) {
     netSalary -= (salary.gross/100) * (DEDUCTION_RATES["ALV"] + DEDUCTION_RATES["NBU"])
   }
+  if(yearSalary > 22680){
+    netSalary -= (salary.gross/100) * (DEDUCTION_RATES["PK"])
+  }
   
 
   const result: Payslip = {
